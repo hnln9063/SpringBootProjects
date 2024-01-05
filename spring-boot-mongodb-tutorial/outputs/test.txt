@@ -1,0 +1,117 @@
+PostRequest
+------------
+url : http://localhost:8082/api/expense
+
+Body:
+{
+    "id": "6597c9ff240086442f44ea52",
+    "expenseName": "Netflix",
+    "expenseCategory": "ENTERTAINMENT",
+    "expenseAmount": 250
+}
+
+{
+    "id": "6597ca45240086442f44ea53",
+    "expenseName": "Hotstar",
+    "expenseCategory": "ENTERTAINMENT",
+    "expenseAmount": 400
+}
+
+{
+    "id": "6597e2be240086442f44ea54",
+    "expenseName": "GYM",
+    "expenseCategory": "MISC",
+    "expenseAmount": 1000
+}
+
+{
+    "expenseName": "Dinner",
+    "expenseCategory": "RESTAURANT",
+    "expenseAmount":1200
+}
+
+GetRequest
+----------
+
+// To list all the expenses
+url : http://localhost:8082/api/expense
+
+[
+    {
+        "id": "6597c9ff240086442f44ea52",
+        "expenseName": "Netflix",
+        "expenseCategory": "ENTERTAINMENT",
+        "expenseAmount": 250
+    },
+    {
+        "id": "6597ca45240086442f44ea53",
+        "expenseName": "Hotstar",
+        "expenseCategory": "ENTERTAINMENT",
+        "expenseAmount": 400
+    },
+    {
+        "id": "6597e2be240086442f44ea54",
+        "expenseName": "GYM",
+        "expenseCategory": "MISC",
+        "expenseAmount": 1000
+    },
+    {
+        "id": "6597e329240086442f44ea55",
+        "expenseName": "Dinner",
+        "expenseCategory": "RESTAURANT",
+        "expenseAmount": 1200
+    }
+]
+
+PutRequest
+----------
+// Update the expense
+url : http://localhost:8082/api/expense
+
+{
+        "id": "6597c9ff240086442f44ea52",
+        "expenseName": "Netflix",
+        "expenseCategory": "ENTERTAINMENT",
+        "expenseAmount": 300
+}
+
+GetRequest
+----------
+// Displaying the expense by name
+url : http://localhost:8082/api/expense/Netflix
+
+{
+    "id": "6597c9ff240086442f44ea52",
+    "expenseName": "Netflix",
+    "expenseCategory": "ENTERTAINMENT",
+    "expenseAmount": 300
+}
+
+Delete
+------
+// Deleting the expense by expenseId
+url : http://localhost:8082/api/expense/6597e2be240086442f44ea54
+
+check status of expense by hitting GetRequest
+
+url : http://localhost:8082/api/expense
+[
+    {
+        "id": "6597c9ff240086442f44ea52",
+        "expenseName": "Netflix",
+        "expenseCategory": "ENTERTAINMENT",
+        "expenseAmount": 300
+    },
+    {
+        "id": "6597ca45240086442f44ea53",
+        "expenseName": "Hotstar",
+        "expenseCategory": "ENTERTAINMENT",
+        "expenseAmount": 400
+    },
+    {
+        "id": "6597e329240086442f44ea55",
+        "expenseName": "Dinner",
+        "expenseCategory": "RESTAURANT",
+        "expenseAmount": 1200
+    }
+]
